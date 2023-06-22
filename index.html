@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Coleta Seletiva</title>
+        <script src="index.js"></script>
+        <link rel="stylesheet" type="text/css" href="index.css">
+        <link rel="shortcut icon" href="./Simbolo.png" type="image/x-icon">
+    </head>
+<body>
+    <h1><img class="simbolo" src="./Simbolo.png" alt="simbolo">Coleta Seletiva<img class="simbolo" src="./Simbolo.png" alt="simbolo">
+</h1>
+    <img class="Lixo" src="Lixeiras.png" alt="">
+
+    <h2><img class="simbolo" src="./Simbolo.png" alt="simbolo">Cadastro de Dicas de Reciclagem<img class="simbolo" src="./Simbolo.png" alt="simbolo"></h2>
+    <label for="material">Material:</label>
+<br>    
+    <select id="material">
+        <option value="plastico">Plástico</option>
+        <option value="metal">Metal</option>
+        <option value="papel">Papel</option>
+        <option value="vidro">Vidro</option>
+        <option value="organico">Orgânico</option>
+        <option value="descartavel">Não Reciclável</option>
+    </select>
+
+<br>
+    <label for="dica">Dica:</label>
+<br>
+    <textarea id="dica" rows="5" cols="100"></textarea>
+<br>
+    <button onclick="cadastrarDica()">Cadastrar</button>
+
+    <h2><img class="simbolo" src="./Simbolo.png" alt="simbolo">Lista de Dicas<img class="simbolo" src="./Simbolo.png"></h2>
+    <label for="filtro">Filtrar por material:</label>
+    <label for="filtro">(Plástico|Metal|Papel|Vidro|Orgânico|Não Reciclável)</label>
+<br>
+    <input type="text" id="filtro">
+<br>
+    <button onclick="filtrarDicas()">Filtrar</button>
+    <ul id="lista-dicas"></ul>
+
+    <h2><img class="simbolo" src="./Simbolo.png" alt="simbolo">Horários de Coleta por Bairro<img class="simbolo" src="./Simbolo.png" alt="simbolo"></h2>
+    <button onclick="exibirHorarios()">Ver Horários</button>
+    <ul id="lista-horarios"></ul>
+</body>
+</html>
